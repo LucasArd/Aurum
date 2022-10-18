@@ -1,0 +1,34 @@
+.title-index{
+    display: none;
+    visibility:hidden;
+}
+
+.section-carousel{
+    height: 520px;
+
+    img{
+        max-width: 100%;
+        max-height: 500px;
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+
+    .title-index-container{
+        display: flex;
+        width: 100%;
+        height: 100px;
+        justify-content: center;
+        padding: 1rem;
+
+        h1{
+            font-size: 4rem;
+            display: flex;
+            visibility: visible;
+        }
+    }
+    .section-carousel{
+        height: 300px;
+    }
+}

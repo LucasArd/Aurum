@@ -1,0 +1,108 @@
+
+
+.title-navbar{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    font-size: 8rem;
+}
+
+.home-navbar{
+    display: none;
+    visibility: hidden;
+}
+
+.search-botton{
+    margin-bottom: 0px;
+    margin-top: 4rem;
+}
+
+.bajo-navbar-collapsed{
+    visibility: hidden;
+    display: none;
+}
+
+
+.bajo-navbar-ul{
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+    height: 5rem;
+    align-items: center;
+    background: #3C3B3F;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #605C3C, #3C3B3F);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #605C3C, #3C3B3F); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+    a{
+        color: black;
+        font-size: 1.5rem;
+        text-decoration: none;
+
+    }
+}
+
+
+
+
+
+@media screen and (max-width: 600px) {
+    .title-navbar{
+        width: 80%;
+        font-size: 3.5rem;
+    }
+    .bajo-navbar-collapsed{
+        display: flex;
+        visibility: visible;
+        justify-content: space-between;
+        align-items: center;
+        padding-right: 1.5rem;
+        height: 3rem;
+        width: 100%;
+        background: #3C3B3F;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #605C3C, #3C3B3F);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #605C3C, #3C3B3F);
+
+        a{
+            color: black;
+            font-size: 1rem;
+            text-decoration: none;
+            font-weight: 450;
+
+        }
+
+    }
+
+    .container-nv{
+        padding:0 !important;
+    }
+
+    .bajo-navbar{
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        margin-top: 10px;
+    
+    .bajo-navbar-ul{
+
+        display: flex;
+        width: 100%;
+        gap: 1rem;
+        visibility: hidden;
+        display: none;
+
+    
+    .bajo-navbar-links{
+            color: black;
+    
+        }
+    }
+    
+    }
+    .bajo-navbar-links-contacto{
+        visibility: hidden;
+        display:none;
+    }
+
+    
+}
+

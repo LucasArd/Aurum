@@ -1,0 +1,99 @@
+
+.parallax{
+    padding-top: 1rem;
+    background: #000000;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #434343, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #434343, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */    
+}
+
+.main-productos-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.img-container-productos{
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    border-radius: 10px;
+    max-height: 800px;
+    max-width: 800x;
+    box-shadow: 5px 8px 12px black;
+    margin-bottom: 2rem;
+
+    a{
+        color: rgb(235, 229, 229);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-weight:900;
+        font-size: 2rem;
+
+    }
+}
+
+
+.img-productos-index{
+height: 100%;
+width: 100%;
+
+
+}
+
+.img-productos-index:hover{
+transform: scale(1.15);
+transition: 1s;
+}
+
+
+@media screen and (max-width: 600px) {
+
+    .main-productos-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .img-container-productos{
+        display: flex;
+        justify-content: center;
+        padding-bottom: 2rem;
+        overflow: hidden;
+        position: relative;
+        border-radius: 10px;
+        max-height: 300px;
+        max-width: 300px;
+        box-shadow: 5px 8px 12px black;
+        margin-bottom: 2rem;
+
+        a{
+            color: rgb(235, 229, 229);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-weight:900;
+            font-size: 2rem;
+
+        }
+    }
+}
+
+.img-productos-index{
+    height: 100%;
+    width: 100%;
+
+
+}
+
+.img-productos-index:hover{
+    transform: scale(1.15);
+    transition: 1s;
+}
+

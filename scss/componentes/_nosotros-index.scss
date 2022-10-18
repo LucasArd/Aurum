@@ -1,0 +1,70 @@
+
+.nosotros-container{
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+    align-items: center;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    background: #3C3B3F;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #605C3C, #3C3B3F);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #605C3C, #3C3B3F); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    h1{
+        font-size: 3rem;
+        color: white;
+    }
+
+    p{
+        width: 80%;
+        text-align: center;
+        color: white;
+
+    }
+}
+
+.iframe-container{
+    padding-top: 3rem;
+    height: 310px;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+
+    .iframe{
+        width: 600px;
+        height: 300px;
+
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+
+    .nosotros-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 650px;
+
+        h1{
+            margin-top: 2rem;
+            font-size: 3rem;
+            color: white;
+        }
+
+        p{
+            width: 80%;
+            margin-top: 2rem;
+            text-align: center;
+            color: white;
+
+        }
+
+    }
+    .iframe-container{
+        height: 250px;
+    }
+
+}
