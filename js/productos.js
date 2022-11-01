@@ -30,8 +30,11 @@ const anillo6 = new Anillo(06, "anillo total serpiente", "anillo de acero con fo
 
 let misAnillos = [anillo1, anillo2, anillo3, anillo4, anillo5, anillo6]; 
 
- // Agregar automaticamente cada anillo nuevo creado al array misAnillos con un forEach ???
-
+// Creo funcion por si quiero crear y agregar automaticamente a mi array de Anillos
+function nuevoAnillo (id, nombre, descripcion, precio, foto, stock) {
+    const nuevoAnillo = ( new Anillo (id, nombre, descripcion, precio, foto, stock))
+    misAnillos.push(nuevoAnillo);
+};
 
 
 
