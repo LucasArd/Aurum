@@ -24,43 +24,51 @@
                   <li> <a class= "bajo-navbar-links"href="">INICIO</a></li>
                   <li> <a class= "bajo-navbar-links"href="">PRODUCTOS</a></li>
                   <li> <a class= "bajo-navbar-links"href="">CARRITO</a></li>
-                  <li> <a class= "bajo-navbar-links"href="">CONTACTO</a></li>
+                  <li> <a class= "bajo-navbar-links"href="" >CONTACTO</a></li>
                 </ul>
               </div>
             </div>
-
           </nav>
           <div class="bajo-navbar">
             <ul class="bajo-navbar-ul">
                 <li> <a class= "bajo-navbar-links"href="">INICIO</a></li>
-                <li> <a class= "bajo-navbar-links"href="">PRODUCTOS</a></li>
-                <li> <a class= "bajo-navbar-links"href="">CARRITO</a></li>
-                <li> <a class= "bajo-navbar-links-contacto"href="">CONTACTO</a></li>
+                <li> <a class= "bajo-navbar-links"href="#products-cont">PRODUCTOS</a></li>
+                <li> <a class= "bajo-navbar-links"href="#nos-cont">NOSOTROS</a></li>
+                <li class="modal_usuario">
+                  <a id="btn-abrir-modal" class= "bajo-navbar-links">CONTACTO</a>
+                  <dialog id="modal">
+                    <form  class="formulario" action="index.html" method="POST" onsubmit="return validacion();">
+                      <h3> Datos de contacto</h3>
+                      <p> Dejanos tu consulta !</p>
+                      <div class="div_inputs">
+                        nombre: <input class="nombre_modal" type="text" name="nombre" placeholder="nombre">
+                        email: <input class="nombre_modal" type="email" name="email" placeholder="email">
+                        telefono: <input class="nombre_modal" type="text" name="telefono" placeholder="telefono">
+                        consulta: <input class="nombre_modal" type="text" name="direccion" placeholder="consulta">
+                      </div>
+                    </form>
+                    <button id="btn-cerrar-modal"> Enviar consulta</button>
+                  </dialog>
+                </li>
             </ul>
           </div>
-
     </div>
-
-    <div class="title-index-container">
-        <h1 class="title-index"> AURUM </h1>
-    </div>
-
+ 
     <section >
         <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner section-carousel">
-              <div class="carousel-item active">
-                <img src="./img/anillo-metalico-inf-removebg-preview (1).jpg" class="d-block w-100" alt="...">
+              <div class="carousel-item active" data-bs-interval="3500" >
+                <img src="./img/anillo-metalico-inf.jpg" class="d-block w-100" alt="...">
               </div>
-              <div class="carousel-item">
+              <div class="carousel-item" data-bs-interval="3500">
                 <img src="./img/collar-cadena.jpg" class="d-block w-100" alt="...">
               </div>
-              <div class="carousel-item">
+              <div class="carousel-item" data-bs-interval="3500">
                 <img src="./img/collar-metalico.jpg" class="d-block w-100" alt="...">
               </div>
             </div>
           </div>
     </section>
-
     <div class="envio-md-container">
       <div class="envio-container">
           <ul class="ul-envio">
@@ -76,24 +84,24 @@
             <li class="envio-titulo">Lorem ipsum dolor sit amet consectetur.</li>
         </ul>
       </div>
-      <div class="envio-container-wpp">
+      <div class="envio-container-wpp" >
         <ul class="ul-envio">
             <li><i class="fa-brands fa-whatsapp fa-3x"></i></li>
             <li class="envio-titulo">Hacenos tu consulta.</li>
-            <li class="envio-titulo">Lorem ipsum dolor sit amet consectetur.</li>
+            <li class="envio-titulo" id="products-cont">Lorem ipsum dolor sit amet consectetur.</li>
         </ul>
       </div>
     </div>
 
-    <div class="main-productos parallax">
+    <div class="main-productos parallax" >
       <div class="main-productos-container">
         <div class="img-container-productos">
           <img src="./img/pulseras-index.jpg" class="img-productos-index" alt="">
-          <a href="#"> PULSERAS </a>
+          <a href="./views/pulseras.html"> PULSERAS </a>
         </div>
         <div class="img-container-productos">
           <img src="./img/collares-index.jpg" class="img-productos-index" alt="">
-          <a href="#"> COLLARES </a>
+          <a href="./views/collares.html"> COLLARES </a>
 
         </div>
         <div class="img-container-productos">
@@ -101,15 +109,11 @@
           <a href="./views/anillos.html"> ANILLOS </a>
 
         </div>
-        <div class="img-container-productos">
-          <img src="./img/aros-index.jpg" class="img-productos-index" alt="">
-          <a href="#"> AROS </a>
 
-        </div>
       </div>
     </div>
 
-    <div class="nosotros-container">
+    <div class="nosotros-container" id="nos-cont">
       <h1>
         AURUM
       </h1>
@@ -121,8 +125,8 @@
       </div>
     </div>
     <div>
-        <footer class="footer-section">
-          <div class="container">
+        <footer class="footer-section" >
+          <div class="container" id="foot">
               <div class="footer-cta pt-5 pb-5">
                   <div class="row">
                       <div class="col-xl-4 col-md-4 mb-30">
@@ -227,5 +231,6 @@
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
+    <script src="./js/contacto.js"></script>
 </body>
 </html>

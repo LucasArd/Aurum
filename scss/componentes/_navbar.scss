@@ -106,3 +106,22 @@
     
 }
 
+//------------------------------------------------------------------------------------------------//
+
+#modal::backdrop{
+    background-color: rgba(0 , 0 , 0 , .55);
+}
+.div_inputs{
+    display:flex;
+    flex-direction: column;
+    padding:1rem;
+    gap:1rem;
+}   
+
+.bajo-navbar-links{
+    color: black;
+    font-size: 1rem;
+    text-decoration: none;
+    font-weight: 450;
+}
+

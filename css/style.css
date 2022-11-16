@@ -83,6 +83,24 @@
     display: none;
   }
 }
+#modal::backdrop {
+  background-color: rgba(0, 0, 0, 0.55);
+}
+
+.div_inputs {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  gap: 1rem;
+}
+
+.bajo-navbar-links {
+  color: black;
+  font-size: 1rem;
+  text-decoration: none;
+  font-weight: 450;
+}
+
 .title-index {
   display: none;
   visibility: hidden;
@@ -203,8 +221,8 @@
   overflow: hidden;
   position: relative;
   border-radius: 10px;
-  max-height: 800px;
-  max-width: 800x;
+  max-height: 450px;
+  max-width: 450x;
   box-shadow: 5px 8px 12px black;
   margin-bottom: 2rem;
 }
@@ -521,9 +539,17 @@
   color: #878787;
 }
 
+.card-img-top-size {
+  max-width: 300px;
+  max-height: 250px;
+  min-height: 250px;
+}
+
+#fin-compra {
+  padding-top: 5rem;
+}
+
 * {
-  margin: 0;
-  padding: 0;
   list-style: none;
 }
 
