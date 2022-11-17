@@ -1,35 +1,25 @@
-// creo variable para trabajar con el DOM
+let nombre = document.getElementById('nombre');
+let email = document.getElementById('email');
+let telefono = document.getElementById('telefono');
+let consulta = document.getElementById('consulta');
+let form = document.getElementById('btn-enviar');
 
-// let contacto = document.getElementById('btn-abrir-modal');
+function validacion() {
+    if (nombre.value === '' || email.value === '' || email.value === ''){
+        alert("los campos NOMBRE, EMAIL y CONSULTA son obligatorios");
+        return false;
+    }
 
-// contacto.addEventListener('click', respuestaClickContacto);
-
-
-// function respuestaClickContacto(){
-//     contacto.innerHTML = `
-//         <form action = "registrar.contacto" method = "POST" class="registro-contacto">
-//             <h2 class= "titulo-formulario"> Datos de contacto </h2>
-//             <div class="contendor-inputs">
-//                 <input type="text" name="nombre" placeholder="Nombre" class="input-1" required>
-//                 <input type="text" name="email" placeholder="correo electronico" class="input-33" required>
-//                 <input type="text" name="domicilio" placeholder="domicilio" class="input-33" required>
-//                 <input type="text" name="telefono" placeholder="telefono" class="input-33" required>
-//                 <input type="submit" value="Registrar" class="btn-enviar">
-//             </div>  
-//         </form>
-    
-//     `;
-// }
-
-const btnAbrirModal = document.querySelector('#btn-abrir-modal');
-const btnCerrarModal = document.querySelector('#btn-cerrar-modal');
-const modal = document.querySelector('#modal');
-
-btnAbrirModal.addEventListener('click', () => {
-    modal.showModal();
-});
-
-btnCerrarModal.addEventListener('click', () => {
-    modal.close();
-});
-
+    else if (nombre.value.length > 15 || nombre.value.length < 2){
+        alert("el nombre es demasiado largo o demasiado corto");
+        return false;
+    }
+    else if (telefono.value.length > 10){
+        alert("el telefono no es valido");
+        return false;
+    }
+    else if (isNaN(telefono.value)){
+        alert("el telefono no es valido, solo se aceptan numeros");
+        return false;
+    }
+};
