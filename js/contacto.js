@@ -22,4 +22,9 @@ function validacion() {
         alert("el telefono no es valido, solo se aceptan numeros");
         return false;
     }
+    else{
+        alert(" Gracias! Pronto recibiras nuestra respuesta");
+        return;
+    }
+
 };

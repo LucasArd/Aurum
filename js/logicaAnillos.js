@@ -3,6 +3,8 @@
 let anillosApi = [];
 
 let totalCarrito;
+
+// asigno variables para reutilizar luego, estas variables acceden al HTML por medio del DOM
 let contenedor = document.getElementById("productos");
 let contenidoCarro = document.getElementById("carrito-productos");
 let precioTotalCarro = document.getElementById("precio-total");
@@ -11,6 +13,7 @@ let finCompra = document.getElementById("fin-compra");
 // convierto a objetos los productos de la clave "carrito-productos" y los asigna a carrito
 let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
+// Si hay al menos 1 producto en el carro, llamo a la funcion para crear la tabla
 if (carrito.length != 0){
     carritoTable();
 }
@@ -18,10 +21,12 @@ if (carrito.length != 0){
 // Funcion asincronica
 obtenerProductos();
 
+// creo funcion que  construira la tabla
 function carritoTable(){
     for(const anillos of carrito){
         // Realizo desestructuracion del objeto y sus propiedades
         const {id , nombre, precio} = anillos
+
         contenidoCarro.innerHTML += `
         <tr>
             <td>${id}</td>
@@ -31,11 +36,13 @@ function carritoTable(){
         </tr>
     `;
     }
+    // Actualizo el total del carrito segun los anillos agregados
     totalCarrito = carrito.reduce((acumulador,anillo)=> acumulador + anillo.precio,0);
     let infoTotal = precioTotalCarro;
     infoTotal.innerText="Total a pagar $: " + totalCarrito;
 }
 
+// creo funcion de renderizado de productos
 function cardsProductos(){
     for (const anillo of anillosApi){
         // Realizo desestructuracion del objeto y sus propiedades
@@ -85,6 +92,7 @@ function agregarAlCarrito(anilloAgregado){
     </tr>    
     `;
 
+    // actualizo total del carrito
     totalCarrito = carrito.reduce((acumulador,anillo)=> acumulador + anillo.precio,0);
     let infoTotal = precioTotalCarro;
     infoTotal.innerText="Total a pagar $: " + totalCarrito;
@@ -118,6 +126,7 @@ function eliminar(ev){ // EV trae a todos los eventos que integran el objeto cre
     localStorage.setItem("carrito",JSON.stringify(carrito));
 } 
 
+// Por medio de esta funcion traigo los objetos de la API creada en MOCKAPI
 function obtenerProductos(){
     const URLanillos = "https://636cf68691576e19e31aef53.mockapi.io/api/Productos";
     fetch(URLanillos)
@@ -135,6 +144,7 @@ finCompra.innerHTML = `
         <button id= "btn-compra" href="#" class="btn btn-primary btn-lg btn-success"> Finalizar Compra </button>
     </div>
 `;
+
 finCompra.onclick = () => {
     if(carrito.length==0){
         Swal.fire({

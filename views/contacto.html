@@ -21,19 +21,17 @@
               </button>
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class = "bajo-navbar-collapsed">
-                  <li> <a class= "bajo-navbar-links"href="">INICIO</a></li>
-                  <li> <a class= "bajo-navbar-links"href="">PRODUCTOS</a></li>
-                  <li> <a class= "bajo-navbar-links"href="">CARRITO</a></li>
-                  <li> <a class= "bajo-navbar-links"href="" >CONTACTO</a></li>
+                  <li> <a class= "bajo-navbar-links"href="../index.html">INICIO</a></li>
+                  <li> <a class= "bajo-navbar-links"href= "#products-cont">PRODUCTOS</a></li>
+                  <li> <a class= "bajo-navbar-links" href="./contacto.html">CONTACTO</a></li>
                 </ul>
               </div>
             </div>
           </nav>
           <div class="bajo-navbar">
             <ul class="bajo-navbar-ul">
-                <li> <a class= "bajo-navbar-links"href="">INICIO</a></li>
+                <li> <a class= "bajo-navbar-links"href="../index.html">INICIO</a></li>
                 <li> <a class= "bajo-navbar-links"href="#products-cont">PRODUCTOS</a></li>
-                <li> <a class= "bajo-navbar-links"href="#nos-cont">NOSOTROS</a></li>
                 <li class="modal_usuario">
                   <a class= "bajo-navbar-links">contacto/prod. personalizados</a>
 
@@ -43,7 +41,7 @@
     </div>
  
 
-    <form  class="formulario" action="" method="post" onsubmit="return validacion();">
+    <form  class="formulario"  onsubmit="return validacion();">
         <h1> Datos de contacto</h1>
         <p> Dejanos tu consulta !</p>
         <div class="div_inputs">  
@@ -51,7 +49,7 @@
           email*: <input id="email" type="email"  placeholder="email" required >
           telefono: <input id="telefono" type="text" placeholder="11-5864-3321">
           consulta*: <input id="consulta" type="text"  placeholder="consulta" required >
-          <input type="submit" value="enviar consulta"  id="btn-enviar">
+          <input type="submit" value="enviar consulta" class="btn-success" id="btn-enviar">
         </div>
     </form>
 
@@ -81,24 +79,22 @@
     </div>
 
     <div class="main-productos parallax" >
-      <div class="main-productos-container">
-        <div class="img-container-productos">
-          <img src="../img/pulseras-index.jpg" class="img-productos-index" alt="">
-          <a href="./views/pulseras.html"> PULSERAS </a>
+        <div class="main-productos-container">
+          <div class="img-container-productos">
+            <img src="../img/pulseras-index.jpg" class="img-productos-index" alt="">
+            <a href="./pulseras.html"> PULSERAS </a>
+          </div>
+          <div class="img-container-productos">
+            <img src="../img/collares-index.jpg" class="img-productos-index" alt="">
+            <a href="./collares.html"> COLLARES </a>
+    
+          </div>
+          <div class="img-container-productos">
+            <img src="../img/anillos-index.jpg" class="img-productos-index" alt="">
+            <a href="./anillos.html"> ANILLOS </a>
+          </div>
         </div>
-        <div class="img-container-productos">
-          <img src="../img/collares-index.jpg" class="img-productos-index" alt="">
-          <a href="./views/collares.html"> COLLARES </a>
-
-        </div>
-        <div class="img-container-productos">
-          <img src="../img/anillos-index.jpg" class="img-productos-index" alt="">
-          <a href="./views/anillos.html"> ANILLOS </a>
-
-        </div>
-
       </div>
-    </div>
 
     <div>
         <footer class="footer-section" >
@@ -206,6 +202,8 @@
       </footer>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <script src="../js/contacto.js"></script>
 </body>
