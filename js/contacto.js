@@ -4,6 +4,8 @@ let telefono = document.getElementById('telefono');
 let consulta = document.getElementById('consulta');
 let form = document.getElementById('btn-enviar');
 
+let nameValue = nombre.value.trim(); // remuevo espacio en blanco del string
+
 function validacion() {
     if (nombre.value === '' || email.value === '' || email.value === ''){
         alert("los campos NOMBRE, EMAIL y CONSULTA son obligatorios");
@@ -14,7 +16,13 @@ function validacion() {
         alert("el nombre es demasiado largo o demasiado corto");
         return false;
     }
-    else if (telefono.value.length > 10){
+
+    else if(isValidString(nameValue)){
+        alert("El nombre solo puede tener letras")
+        return false;
+    }
+
+    else if (telefono.value.length > 10 || telefono.valure.length < 8){
         alert("el telefono no es valido");
         return false;
     }
@@ -28,3 +36,8 @@ function validacion() {
     }
 
 };
+
+function isValidString(value) {
+    const regex = /^[a-zA-Z\s]*$/; // permite solo letras mayúsculas y minúsculas, y espacios en blanco
+    return regex.test(value);
+}
